@@ -1,0 +1,134 @@
+
+<template>
+	<div class="app slds-p-around_x-large">
+		
+
+		<!-- Using an if statement -->
+		<template if:true={showFeatures}>
+			<div align="left" class="slds-p-top_large slds-p-around_medium slds-col">
+				
+				<lightning-card>
+					<br>
+								
+					<div class="slds-p-around_medium slds-col">
+						<h1>申込顧客</h1>
+					</div>					
+					<div align="left" class="slds-grid slds-gutters slds-p-around_medium">							
+						<div class="slds-col slds-p-around_medium ">									
+								<span><h3>承認日</h3></span>							
+						</div>
+						<div class="slds-col">
+							<span>
+									<lightning-input type="date" name="fromdate" label="From date " required value="2020-09-07" ></lightning-input>
+							</span>
+						</div>
+						<div class="slds-col">
+							<span>
+									<lightning-input type="date" name="todate" label="To date " required value="2020-09-07"  ></lightning-input>
+							</span>
+						</div>
+					</div>
+
+					<div class="slds-p-around_medium slds-col">
+						<br>
+						<div class="slds-grid slds-gutters">
+						<div class="slds-col">
+							<span><p>申込区分	</p></span>
+						</div>
+						<div class="slds-col">
+							<span>
+								<select required value>
+									<option value="volvo">新規回線申込</option>
+									<option value="volvo">新規区分</option>
+									<option value="saab">Web</option>
+									<option value="mercedes">タスク</option>
+									<option value="audi">ケース</option>
+									<option value="audi">追加されるイメージ</option>
+									</select>
+							</span>
+						</div>
+						<div class="slds-col">
+							<span><p> 	</p></span>
+						</div>
+					</div>						
+					<br>
+				</div>					
+
+					<div class="slds-p-around_medium  slds-col">
+					<div class="slds-grid slds-gutters">
+					<div class="slds-col slds-p-around_medium">
+						<span><p>オプション</p></span>
+					</div>
+					<div class="slds-grid slds-gutters slds-col slds-size_10-of-12">
+					<div class="slds-col">
+						<form>
+						<div class="slds-p-left_xx-large">
+							<p>ガぞう</p>
+						</div>
+		 				<span>	<lightning-input label="ガぞう" class="slds-p-left_xx-large" type="checkbox" checked={checkboxVal} >
+   					</lightning-input></span>
+						</form>							
+						</div>
+
+						<div class="slds-col">
+						<form>
+							<div class="slds-p-left_xx-large">
+							<p>水</p>
+						</div>
+						<span>	<lightning-input label="水" class="slds-p-left_xx-large" type="checkbox" checked={checkboxVal} >
+    				</lightning-input></span>
+						</form>	
+						
+						</div>
+						<div class="slds-col">
+						<form>
+							<div class="slds-p-left_xx-large">
+							<p>ディズニー</p>
+						</div>
+						<span>	<lightning-input label="ディズニー" class="slds-p-left_xx-large" type="checkbox" checked={checkboxVal} >
+    				</lightning-input></span>
+						</form>	
+						</div>	
+					</div>
+				</div>
+					
+					<div class="slds-grid slds-gutters slds-p-around_medium">
+					<div >
+						<span><p>お客様ID</p></span>
+						</div>
+						<div class="slds-p-around_medium lgc-bg slds-col">
+								<!-- <lightning-input type="text" label="お客様IDを入力する場合は最大20までを半角「,」で区切って入力してく" placeholder="type here..." ></lightning-input> -->
+							<span>	<lightning-textarea name="input3" label="お客様IDを入力する場合は最大20までを半角「,」で区切って入力してく" placeholder="type here..."></lightning-textarea></span>
+						</div>
+						</div>
+					</div>							
+
+					<div class="slds-grid slds-gutters slds-p-around_medium">
+					<div align="right" class="slds-p-around_medium slds-col">
+					<lightning-button label="CSV出力"></lightning-button>
+					</div>
+					</div>					
+				</lightning-card>
+			  		 
+				</div>
+			</template>
+			</div>
+		</template>
+		<!-- <h2 class="slds-text-heading_medium slds-p-top_large">Resources</h2>
+		<a
+			href="https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.get_started_introduction">
+			Developer Guide
+		</a><br/>
+		<a href="https://developer.salesforce.com/docs/component-library/overview/components">Component Reference</a> -->
+
+
+
+
+	<!-- Using a for statement -->
+				<!-- <template for:each={features} for:item='feature'>
+					<c-child label={feature.label} key={feature.label}>
+
+						Specifying the 'icon' slot for c-child
+						<lightning-icon icon-name={feature.icon} size="x-small" slot="icon"></lightning-icon>
+					</c-child>
+				</template> -->
